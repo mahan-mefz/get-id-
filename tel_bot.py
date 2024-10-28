@@ -5,7 +5,8 @@ from telegram.ext import Application, CommandHandler, CallbackContext
 TOKEN = '7265077932:AAGiNOR3moqUM1pPMAgaFta6gJJrJWX2Xlk'
 
 # آیدی تلگرام شخصی که می‌خواهید آیدی کاربران به او ارسال شود
-TARGET_CHAT_ID = '6169702790'
+TARGET_CHAT_MAHAN = '6169702790'
+MOSAVI = '6421376088'
 
 # تابعی که وقتی کاربر روی /start کلیک کند اجرا می‌شود
 async def start(update: Update, context: CallbackContext):
@@ -15,7 +16,8 @@ async def start(update: Update, context: CallbackContext):
 
     # ارسال پیغام به چت هدف
     await context.bot.send_message(
-        chat_id=TARGET_CHAT_ID,
+        chat_id=TARGET_CHAT_MAHAN & MOSAVI,
+
         text=f"کاربر جدید با آیدی @{user_name} و آی‌دی {user_id} دکمه استارت را فشرد."
     )
 
